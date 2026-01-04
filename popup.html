@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Disable Page Visibility API</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Disable Page Visibility API</h1>
+        <div class="toggle-container">
+            <label class="toggle-label">
+                <span class="toggle-text">Extension Status:</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="toggleSwitch" checked>
+                    <span class="slider"></span>
+                </div>
+            </label>
+            <div class="status-text">
+                <span id="statusText">Enabled</span>
+            </div>
+        </div>
+        <p class="description">When enabled, prevents websites from tracking whether you are currently in another tab/window.</p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

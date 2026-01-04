@@ -1,0 +1,108 @@
+body {
+    width: 320px;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.container {
+    padding: 16px;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: #0c0c0d;
+}
+
+.toggle-container {
+    margin-bottom: 12px;
+}
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.toggle-text {
+    font-weight: 500;
+    color: #0c0c0d;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    display: inline-block;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0060df;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #0060df;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.status-text {
+    padding-left: 4px;
+}
+
+#statusText {
+    font-size: 13px;
+    color: #0060df;
+    font-weight: 500;
+}
+
+#statusText.disabled {
+    color: #d70022;
+}
+
+.description {
+    font-size: 12px;
+    color: #737373;
+    line-height: 1.5;
+    margin: 12px 0 0 0;
+    padding-top: 12px;
+    border-top: 1px solid #ededf0;
+}
