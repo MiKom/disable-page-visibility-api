@@ -16,26 +16,36 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-window.addEventListener(
-	"visibilitychange",
-	function (event) {
-		event.stopImmediatePropagation();
-	},
-	true
-);
+// Get browser API (works for both Firefox and Chrome)
+const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
 
-window.addEventListener(
-	"webkitvisibilitychange",
-	function (event) {
-		event.stopImmediatePropagation();
-	},
-	true
-);
+// Check if extension is enabled before blocking events
+browserAPI.storage.sync.get(['enabled'], function(result) {
+	const enabled = result.enabled !== false; // Default to true if not set
+	
+	if (enabled) {
+		window.addEventListener(
+			"visibilitychange",
+			function (event) {
+				event.stopImmediatePropagation();
+			},
+			true
+		);
 
-window.addEventListener(
-	"blur",
-	function (event) {
-		event.stopImmediatePropagation();
-	},
-	true
-);
+		window.addEventListener(
+			"webkitvisibilitychange",
+			function (event) {
+				event.stopImmediatePropagation();
+			},
+			true
+		);
+
+		window.addEventListener(
+			"blur",
+			function (event) {
+				event.stopImmediatePropagation();
+			},
+			true
+		);
+	}
+});

@@ -4,6 +4,22 @@
 	"version": "1.0.3",
 	"author": "Marvin Schopf",
 	"description": "Prevent websites from tracking whether you are currently in another tab/ window.",
+	"permissions": [
+		"storage",
+		"tabs"
+	],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"48": "icon.png",
+			"96": "icon@2x.png"
+		},
+		"default_title": "Disable Page Visibility API"
+	},
 	"content_scripts": [
 		{
 			"matches": ["*://*/*"],
