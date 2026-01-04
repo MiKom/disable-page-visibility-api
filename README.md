@@ -3,6 +3,17 @@ Add-on to disable the Page Visibility API.
 
 This prevents e.g. video conferencing systems from tracking whether you are currently in another window.
 
+## Features
+- **Toggle On/Off**: Easily enable or disable the extension through a popup interface
+- **Persistent Settings**: Your preference is saved and remembered across browser sessions
+- **Automatic Application**: Changes take effect immediately on all open tabs
+
+## Usage
+1. Click on the extension icon in your browser toolbar
+2. Use the toggle switch to enable or disable the extension
+3. When enabled, the extension will block the Page Visibility API on all websites
+4. When disabled, websites can detect tab visibility changes normally
+
 ## License
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
